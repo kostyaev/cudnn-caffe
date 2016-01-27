@@ -2,11 +2,14 @@
 Dockerfile for cudnn based caffe
 
 Steps:
+1. Add cuddn.tgz (https://developer.nvidia.com/cudnn) to project root.
 
-1. Run docker container with nvidia devices mounted: 
+2. Build docker image (```docker run build -t cudnn-caffe```)
+
+3. Run docker container with nvidia devices mounted: 
   
-  docker run -it -v /opt/data:/opt/data --device /dev/nvidiactl --device /dev/nvidia0 cudnn-caffe
-2. re-install cuda (following recomedations from http://tleyden.github.io/blog/2015/11/22/running-neural-style-on-an-aws-gpu-instance):
+  ```docker run -it -v /opt/data:/opt/data --device /dev/nvidiactl --device /dev/nvidia0 cudnn-caffe```
+4. re-install cuda (following recomedations from http://tleyden.github.io/blog/2015/11/22/running-neural-style-on-an-aws-gpu-instance):
   
   ```bash
   wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1404/x86_64/cuda-repo-ubuntu1404_7.5-18_amd64.deb
@@ -28,4 +31,4 @@ Steps:
   export LD_LIBRARY_PATH=:/usr/local/cuda-7.5/lib64
   sudo ldconfig
   ```
-3. Run caffe
+5. Run caffe
