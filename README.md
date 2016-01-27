@@ -1,7 +1,9 @@
 # cudnn-caffe
 Dockerfile for cudnn based caffe
 
-Steps:
+Installation:
+
+0. Install CUDA-7.5 on the host machine
 
 1. Add cuddn.tgz (https://developer.nvidia.com/cudnn) to project root.
 
