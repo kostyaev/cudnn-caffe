@@ -2,6 +2,7 @@
 Dockerfile for cudnn based caffe
 
 Steps:
+
 1. Add cuddn.tgz (https://developer.nvidia.com/cudnn) to project root.
 
 2. Build docker image (```docker run build -t cudnn-caffe```)
